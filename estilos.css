@@ -4,6 +4,7 @@
    #animacionBoton{/*caracteristicas iniciales*/
       width: 200px;
       height: 200px;
+      color: red;
       background-color: blue;
       transition: width 0.5s ease 0.2s;
    }
