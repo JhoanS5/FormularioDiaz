@@ -13,4 +13,15 @@
       width: 300px;
       background-color: red;
    }
+
+   #animacion{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      transition: transform 0.5s ease;
+   }
+
+   #animacion:hover{
+      transform: rotate(45deg) scale(1.2) translateX(50px) skewX(20deg);
+   }
 </style>
