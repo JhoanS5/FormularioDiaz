@@ -1,5 +1,14 @@
 /*Estilos personalizados*/
 /*class="card-title*/
-[class="card-title"]{
-   color: blue;
-}
+<style>
+   #animacionBoton{/*caracteristicas iniciales*/
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      transition: width 0.5s ease 0.2s;
+   }
+
+   #animacionBoton:hover {
+      width: 300px;
+   }
+</style>
