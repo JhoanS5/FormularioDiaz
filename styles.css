@@ -1,0 +1,80 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+}
+
+/* Formulario centrado */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Grid Layout for fields */
+form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Fieldset */
+fieldset {
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Transiciones y animaciones */
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], .form-control-file {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="date"]:focus, .form-control-file:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Botones con animaciones */
+input[type="submit"], input[type="reset"] {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+input[type="submit"]:active, input[type="reset"]:active {
+    background-color: #003f7f;
+    transform: translateY(0);
+}
+
+/* Flexbox para botones */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
