@@ -97,7 +97,7 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     form {
         padding: 15px;
         max-width: 100%;
-        background-color: #e0f7fa; /* Color de fondo para móvil */
+        background-color: #e73dcb; /* Color de fondo para móvil */
     }
     
     div {
