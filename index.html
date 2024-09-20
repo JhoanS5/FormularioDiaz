@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Formulario</title>
-
 </head>
 <body>
     <form action="servidor.html" method="get" target="_blank">
@@ -20,7 +19,7 @@
                 <input type="text" placeholder="Ingrese su Apellido" name="lastName" id="idLastName" required>
             </div>
             <div>
-                <label for="idPhone">Telefono:</label>
+                <label for="idPhone">Teléfono:</label>
                 <input type="number" placeholder="Ingrese su Número" name="phoneNumber" id="idPhone" required>
             </div>
             <div>
@@ -32,17 +31,17 @@
         <fieldset>
             <legend>Datos Adicionales</legend>
             <div>
-                <label for="idCountry">Pais:</label>
+                <label for="idCountry">País:</label>
                 <select id="idCountry" name="country" required>
                     <option value=""></option>
                     <option value="COL">Colombia</option>
                     <option value="VEN">Venezuela</option>
-                    <option value="MEX">Mexico</option>
+                    <option value="MEX">México</option>
                     <option value="ARG">Argentina</option>
                 </select>
             </div>
             <div>
-                <label>Genero:</label>
+                <label>Género:</label>
                 <label for="idMen">
                     <input type="radio" name="genero" value="men" id="idMen" required>Hombre
                 </label>
@@ -59,12 +58,15 @@
                 </label>
             </div>
         </fieldset>
+        
         <fieldset>
-            <legend>Envio Información</legend>
+            <legend>Envío Información</legend>
             <input type="submit" value="Enviar">
             <input type="reset" value="Cancelar">
         </fieldset>
 
+        <!-- Mensaje especial -->
+        <div id="teQuiero">Te quiero Oriano</div>
     </form>
 </body>
 </html>
