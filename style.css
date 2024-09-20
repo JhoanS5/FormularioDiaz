@@ -109,18 +109,33 @@ input[type="submit"]:hover, input[type="reset"]:hover {
         padding: 12px;
         margin-bottom: 10px; /* Separación entre los botones */
     }
+}
 
-    #teQuiero {
-        display: block; /* Mostrar el mensaje */
-        text-align: center;
-        color: #800080; /* Color morado oscuro */
-        font-size: 1.2em;
-        margin-top: 20px;
-        animation: fadeIn 1.5s ease-out;
+/* Estilos del Mensaje */
+.message {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 15px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Ocultar el mensaje en pantallas más grandes */
+@media (min-width: 601px) {
+    .message {
+        display: none;
     }
 }
 
-/* Mensaje escondido por defecto */
-#teQuiero {
-    display: none; /* Oculto en pantallas grandes */
+.heart {
+    font-size: 1.5em; /* Tamaño del corazón */
+    display: inline-block;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
 }
