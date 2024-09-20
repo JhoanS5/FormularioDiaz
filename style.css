@@ -95,9 +95,9 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 /* Estilos Responsivos */
 @media (max-width: 600px) {
     form {
-        background-color: blue;
         padding: 15px;
         max-width: 100%;
+        background-color: #e0f7fa; /* Color de fondo para móvil */
     }
     
     div {
@@ -107,6 +107,6 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     input[type="submit"], input[type="reset"] {
         width: 100%;
         padding: 12px;
-        gap: 5px
+        margin-bottom: 10px; /* Separación entre los botones */
     }
 }
