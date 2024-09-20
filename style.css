@@ -1,92 +1,110 @@
-/* General */
+/* Estilos Generales */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f9;
-    padding: 20px; /* Agrega padding para evitar desbordamiento en pantallas pequeñas */
+    min-height: 100vh; /* Asegurarse de que ocupe toda la pantalla */
 }
 
-/* Formulario centrado con Flexbox */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    width: 500px; /* Ancho máximo para evitar que se salga del viewport */
-    margin: auto;
-}
-
-/* Layout del formulario */
 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Asegura que el formulario ocupe todo el ancho del contenedor */
-    gap: 20px; /* Espaciado entre campos */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;  /* Se adapta a pantallas pequeñas */
+    max-width: 600px;  /* Máximo ancho en pantallas grandes */
+    margin: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
-/* Fieldset */
 fieldset {
-    border: 2px solid #007bff;
-    padding: 15px;
-    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
 }
 
 legend {
-    padding: 0 10px;
+    font-size: 1.2em;
+    color: #333;
     font-weight: bold;
-    color: #007bff;
+    margin-bottom: 10px;
 }
 
-/* Transiciones y animaciones en los inputs */
-input[type="text"], input[type="email"], input[type="number"], input[type="date"], .form-control-file {
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="number"], input[type="email"], select {
     width: 100%;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="date"]:focus, .form-control-file:focus {
+input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, select:focus {
     border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
 }
 
-/* Botones con Flexbox y animaciones */
-.form-group {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
+input[type="radio"], input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 input[type="submit"], input[type="reset"] {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover, input[type="reset"]:hover {
     background-color: #0056b3;
-    transform: translateY(-3px);
 }
 
-input[type="submit"]:active, input[type="reset"]:active {
-    background-color: #003f7f;
-    transform: translateY(0);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+/* Estilos Responsivos */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    div {
+        margin-bottom: 10px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        padding: 12px;
+    }
+}
